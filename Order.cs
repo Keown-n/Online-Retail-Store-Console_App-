@@ -46,15 +46,7 @@ namespace ConsoleApp13
             inventory.RemoveMultiple(items);
         }
 
-        public void ConfirmPurchase()
-        {
-            Console.WriteLine("Purchase successful");
-        }
-
-        public void ConfirmReturn()
-        {
-            Console.WriteLine("Return successful");
-        }
+       
 
     }
 }

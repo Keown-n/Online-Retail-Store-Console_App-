@@ -26,7 +26,7 @@ namespace ConsoleApp13
                     }
                     else { 
                         item.setElectronicStock(latest);
-                        Console.WriteLine("Processed Electronic product...");
+                        Console.WriteLine("Purchased Electronic product...");
                         break;
                     }
                     
@@ -42,7 +42,7 @@ namespace ConsoleApp13
                     else
                     {
                         item.setClothingStock(latest);
-                        Console.WriteLine("Processed Clothing product...");
+                        Console.WriteLine("Purchased Clothing product...");
                         break;
                     }
 
@@ -57,7 +57,7 @@ namespace ConsoleApp13
                     else
                     {
                         item.setGroceryStock(latest);
-                        Console.WriteLine("Processed Grocery product...");
+                        Console.WriteLine("Purchased Grocery product...");
                         break;
                     }
 
@@ -79,25 +79,25 @@ namespace ConsoleApp13
                     latest = item.getElectronicStock() + 1;
                  
                         item.setElectronicStock(latest);
-                        Console.WriteLine("Processed Electronic product...");
+                        Console.WriteLine("Returned Electronic product...");
                         break;
 
                 case "clothing":
                     latest = item.getClothingStock() + 1;
                                        
                         item.setClothingStock(latest);
-                        Console.WriteLine("Processed Clothing product...");
+                        Console.WriteLine("Returned Clothing product...");
                         break;
                     
 
                 case "grocery":
                     latest = item.getGroceryStock() + 1;
-                    DateTime today = DateTime.Now.AddDays(57);
+                    DateTime today = DateTime.Now;
 
                     if(today< item.getExpiry())
                     {
                         item.setGroceryStock(latest);
-                        Console.WriteLine("Processed Grocery product...");
+                        Console.WriteLine("Returned Grocery product...");
                         break;
                     }
                     else
